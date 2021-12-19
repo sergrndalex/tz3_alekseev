@@ -13,25 +13,29 @@ names_w_arrays = {
     "check7.txt": tz3_alekssev.get_array("check7.txt"),
 }
 
+
+def test_prod_get():
+    """Протестриуем функцию нахождения произведения для каждого списка"""
+    for array in names_w_arrays.values():
+        assert functools.reduce((lambda x, y: x * y), array) == tz3_alekssev.prod_get(array)
+        
+def test_maximum_search():
+    """Протестриуем функцию нахождения максимума для каждого списка"""
+    for array in names_w_arrays.values():
+        assert max(array) == tz3_alekssev.maximum_search(array)
+
 def test_minimum_search():
     """Протестриуем функцию нахождения минимума для каждого списка"""
     for array in names_w_arrays.values():
         assert min(array) == tz3_alekssev.minimum_search(array)
 
-def test_maximum_search():
-    """Протестриуем функцию нахождения максимума для каждого списка"""
-    for array in names_w_arrays.values():
-        assert max(array) == tz3_alekssev.maximum_search(array)
+
 
 def test_sum_get():
     """Протестриуем функцию нахождения суммы для каждого списка"""
     for array in names_w_arrays.values():
         assert sum(array) == tz3_alekssev.sum_get(array)
 
-def test_prod_get():
-    """Протестриуем функцию нахождения произведения для каждого списка"""
-    for array in names_w_arrays.values():
-        assert functools.reduce((lambda x, y: x * y), array) == tz3_alekssev.prod_get(array)
 
 def test_search_median():
     """Протестируем функцию нахождения медианных значений"""

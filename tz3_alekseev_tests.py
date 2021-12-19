@@ -1,6 +1,5 @@
 import tz3_alekssev
 import functools
-import numpy
 import statistics
 
 

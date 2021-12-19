@@ -23,4 +23,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Run pytest tests
-      run: python pytest tz3_alekseev_tests.py
+      run: python -m pytest --import-mode=append tz3_alekseev_tests.py
